@@ -1,0 +1,39 @@
+PROCEDURE arraysort(V1: ARRAY_OF INTEGER)
+
+VAR
+    V1: ARRAY_OF INTEGER [n];
+    tmp, n, i, j: INTEGER;
+BEGIN
+     FOR i FROM 1 TO n STEP 1  DO
+     FOR j FROM i-1 TO n-1 STEP 1  DO
+     
+     tmp := V1 [j]
+
+     IF (V1 [i] < v1[j]) THEN
+     V1 [j] := V1 [i]   
+     V1[i] := tmp 
+  
+    END_IF
+    END FOR
+    END FOR
+    RETURN (V1)
+END
+
+ALGORITHM sorting 
+VAR
+    V1: ARRAY_OF INTEGER [n];
+   
+    n, i, j: INTEGER;
+BEGIN
+    write ("GIVE VALUE FOR n"); read (n);
+
+    FOR i FROM 0 TO n-1 STEP 1  DO  
+    write ("GIVE VALUES FOR V1" i);
+    read (V1[i]);
+    END FOR
+
+    write ("the unsorted array is" V1);
+    V1:= arraysort(V1);
+    write ("the sorted array is" V1); 
+    
+END
